@@ -1,4 +1,4 @@
-var container = document.getElementById("container");
+    var container = document.getElementById("container");
     var content = document.getElementById("content");
     var section1 = document.getElementById("section1");
     var section2 = document.getElementById("section2");
@@ -12,6 +12,7 @@ var container = document.getElementById("container");
     var button4 = document.getElementById("button4");
     var button5 = document.getElementById("button5");
     var button6 = document.getElementById("button6");
+    var button44 = document.getElementById("button44");
     var section1Height = section1.offsetHeight;
     var section2Height = section2.offsetHeight;
     var section3Height = section3.offsetHeight+section2.offsetHeight;
@@ -177,19 +178,11 @@ var container = document.getElementById("container");
         
  
     };
-
-    // section6.onclick = function() {
-    //     scrollTargetHeight = section1Height;
-       
-    //     setTimeout(function() {
-    //     scrollUp();
-    //     }, 5000);
+    button44.onclick = function() {
+        scrollTargetHeight = section5Height;
+        scrollDown();
+        setTimeout(function() {
+            fadeIn5();
+        }, 1500);
         
-    
-    // };
-
-
-
-
-
-  
+    };
