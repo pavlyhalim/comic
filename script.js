@@ -8,22 +8,22 @@ var section4 = document.getElementById("section4");
 var section5 = document.getElementById("section5");
 var section6 = document.getElementById("section6");
 
-//change the background color of the sections with scroll animation 
-window.addEventListener("scroll", function() {
-    var value = window.scrollY;
-    section1.style.clipPath = "circle(" + value + "px at center)"; 
-    section1.style.backgroundColor = "rgb(200, 40, " + value + ")";
-    section2.style.clipPath = "circle(" + value + "px at center)";
-    //change gradient color of the background
-    var secTwoVal = value - window.innerHeight
-    section2.style.backgroundColor = "rgb(255, 100, " + secTwoVal + ")";
-    // section3.style.clipPath = "circle(" + value + "px at center)";
-    var secThreeVal = value - window.innerHeight*2
-    section3.style.backgroundColor = "rgb(50, 180, " + secThreeVal + ")";
-    // section4.style.clipPath = "circle(" + value + "px at center)";
+// //change the background color of the sections with scroll animation 
+// window.addEventListener("scroll", function() {
+//     var value = window.scrollY;
+//     section1.style.clipPath = "circle(" + value + "px at center)"; 
+//     section1.style.backgroundColor = "rgb(200, 40, " + value + ")";
+//     section2.style.clipPath = "circle(" + value + "px at center)";
+//     //change gradient color of the background
+//     var secTwoVal = value - window.innerHeight
+//     section2.style.backgroundColor = "rgb(255, 100, " + secTwoVal + ")";
+//     // section3.style.clipPath = "circle(" + value + "px at center)";
+//     var secThreeVal = value - window.innerHeight*2
+//     section3.style.backgroundColor = "rgb(50, 180, " + secThreeVal + ")";
+//     // section4.style.clipPath = "circle(" + value + "px at center)";
 
-    var secFourVal = value - window.innerHeight*3
-    section4.style.backgroundColor = "rgb(200, 0, " + secFourVal + ")";
+//     var secFourVal = value - window.innerHeight*3
+//     section4.style.backgroundColor = "rgb(200, 0, " + secFourVal + ")";
 
     //move the images with scroll animation
     section1.style.backgroundPosition = "center " + value * 0.5 + "px";
