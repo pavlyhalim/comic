@@ -159,6 +159,15 @@ var container = document.getElementById("container");
         }, 1500);
         
     };
+    button6.onclick = function() {
+        scrollTargetHeight = section6Height;
+        scrollDown();
+        setTimeout(function() {
+            fadeIn6();
+        }, 1500);
+        
+ 
+    };
     button5.onclick = function() {
         scrollTargetHeight = section6Height;
         scrollDown();
@@ -178,3 +187,9 @@ var container = document.getElementById("container");
         
     
     // };
+
+
+
+
+
+  
