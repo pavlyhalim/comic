@@ -1,0 +1,105 @@
+html {
+    scroll-behavior: smooth;
+  }
+      body {
+          margin: 0;
+          padding: 0;
+          background-color: #000;
+          color: #fff;
+          font-family: sans-serif;
+          font-size: 16px;
+          line-height: 1.5;
+      }
+      .container {
+          max-width: 100%;
+          margin: 0 auto;
+          padding: 0 auto;
+      }
+      .header {
+          background-color: #000;
+          color: #fff;
+          padding: 20px 0;
+      }
+     
+      .section {
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+  
+      }
+      .section h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 24px;
+      }
+  
+      #section1 {
+          background-color: #000;
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+      }
+  
+      #section2 {
+          background-color: #000;
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+      }
+  
+      #section3 {
+          background-color: #000;
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+      }
+  
+      #section4 {
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+      }
+  
+      #section5 {
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+      }
+  
+  
+      #section6 {
+          padding: 20px 0;
+          height: 100%;
+          width: 100%;
+      }
+  
+      .section p {
+          margin: 0;
+          padding: 0;
+      }
+      .footer {
+          background-color: #000;
+          color: #fff;
+          padding: 20px 0;
+      }
+     
+      .center {
+          text-align: center;
+      }
+  
+      a {
+          color: #fff;
+          text-decoration: none;
+          bottom: 10px;
+          top: 40px;
+          right: 45%;
+          padding: 10px;
+          background-color: #000;
+          border: 1px solid #fff;
+      }
+  
+      .content {
+          padding-left: 10vw;
+          padding-right: 10vw;
+      }
+  
