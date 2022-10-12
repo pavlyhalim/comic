@@ -3,6 +3,10 @@
 <meta charset="utf-8">
 <title>Comic</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -13,11 +17,17 @@
            <!--add image -->
            <img src="1.jpg" alt="image" width="100%" height="100%">
             <button id ="button1" style="position: absolute; bottom: 0; left: 50%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">get up</button>
+            <div class="text-block" data-aos="fade-left">
+                <p>Let's wake him up</p>
+            </div>
     </div>
 
         <div id="section2">
             <img src="2.jpg" alt="image" width="100%" height="100%">
             <button id ="button2" style="position: absolute; bottom: 0; left: 50%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">change clothes</button>
+            <div class="text-block2" data-aos="slide-in">
+                <p>Wait! Let me change before leaving!</p>
+            </div>
 </div>
 
         <div id="section3">
@@ -25,6 +35,9 @@
             <img src="3.jpg" alt="image" width="100%" height="100%">
             <button id ="button3" style="display:inline-block; position: absolute; bottom: 0; left: 35%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">go to class</button>
             <button id ="button4" style="display:inline-block; position: absolute; bottom: 0; left: 65%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">go eat</button>
+            <div class="text-block2" data-aos="slide-in">
+                <p>UGH!! I can't decide what to do!?</p>
+            </div>
 
         </div>
 
@@ -32,22 +45,37 @@
             <img src="4.jpg" alt="image" width="100%" height="100%">
             <button id ="button44" style="display:inline-block; position: absolute; bottom: 0; left: 35%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">go eat</button>
             <button id ="button5" style="display:inline-block; position: absolute; bottom: 0; left: 65%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">go sleep</button>
+            <div class="text-block2" data-aos="slide-in">
+                <p>The class was so boring!! What should I do now?</p>
+            </div>
 </div>
 
         <div id="section5">
 
             <img src="5.jpg" alt="image" width="100%" height="100%">
             <button id ="button6" style="position: absolute; bottom: 0; left: 50%; padding: 35px 50px; background-color: white; font-size: 20; transform: translate(-50%, -50%);">go sleep</button>
+            <div class="text-block2" data-aos="slide-in">
+                <p>I AM SO TIRED!! Take me to the bed!</p>
+            </div>
 
         </div>
         <div id="section6">
 
             <img src="1.jpg" alt="image" width="100%" height="100%">
+            <div class="text-block2" data-aos="slide-in">
+                <p>GOOD NIGHT!</p>
+            </div>
 
         </div>
         </div>
 </div>
    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init({
+       duration: 2000,
+     });
+    </script>
     </body>
    
 </html>
