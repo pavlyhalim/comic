@@ -1,111 +1,180 @@
-//scroll animation for the sections of the body of the webpage with scroll animation and a story telling
-//change the background color of the sections with scroll animation
+var container = document.getElementById("container");
+    var content = document.getElementById("content");
+    var section1 = document.getElementById("section1");
+    var section2 = document.getElementById("section2");
+    var section3 = document.getElementById("section3");
+    var section4 = document.getElementById("section4");
+    var section5 = document.getElementById("section5");
+    var section6 = document.getElementById("section6");
+    var button1 = document.getElementById("button1");
+    var button2 = document.getElementById("button2");
+    var button3 = document.getElementById("button3");
+    var button4 = document.getElementById("button4");
+    var button5 = document.getElementById("button5");
+    var button6 = document.getElementById("button6");
+    var section1Height = section1.offsetHeight;
+    var section2Height = section2.offsetHeight;
+    var section3Height = section3.offsetHeight+section2.offsetHeight;
+    var section4Height = section4.offsetHeight+section3.offsetHeight+section2.offsetHeight;
+    var section5Height = section5.offsetHeight+section4.offsetHeight+section3.offsetHeight+section2.offsetHeight;
+    var section6Height = section6.offsetHeight+section5.offsetHeight+section4.offsetHeight+section3.offsetHeight+section2.offsetHeight;
+    var scrollAmount = 0;
+    var scrollSpeed = 10;
+    var scrollInterval = 10;
+    var scrollIntervalup = 2;
+    var scrollIntervalID;
+    var scrollDirection = "down";
+    var scrollTargetHeight = section2Height;
 
-var section1 = document.getElementById("section1");
-var section2 = document.getElementById("section2");
-var section3 = document.getElementById("section3");
-var section4 = document.getElementById("section4");
-var section5 = document.getElementById("section5");
-var section6 = document.getElementById("section6");
 
-// //change the background color of the sections with scroll animation 
-// window.addEventListener("scroll", function() {
-//     var value = window.scrollY;
-//     section1.style.clipPath = "circle(" + value + "px at center)"; 
-//     section1.style.backgroundColor = "rgb(200, 40, " + value + ")";
-//     section2.style.clipPath = "circle(" + value + "px at center)";
-//     //change gradient color of the background
-//     var secTwoVal = value - window.innerHeight
-//     section2.style.backgroundColor = "rgb(255, 100, " + secTwoVal + ")";
-//     // section3.style.clipPath = "circle(" + value + "px at center)";
-//     var secThreeVal = value - window.innerHeight*2
-//     section3.style.backgroundColor = "rgb(50, 180, " + secThreeVal + ")";
-//     // section4.style.clipPath = "circle(" + value + "px at center)";
 
-//     var secFourVal = value - window.innerHeight*3
-//     section4.style.backgroundColor = "rgb(200, 0, " + secFourVal + ")";
+    function scrollDown() {
+        scrollDirection = "down";
+        scrollIntervalID = setInterval(scroll, scrollInterval);
+    }
 
-    //move the images with scroll animation
-    section1.style.backgroundPosition = "center " + value * 0.5 + "px";
-    section2.style.backgroundPosition = "center " + value * 0.5 + "px";
-    section3.style.backgroundPosition = "center " + value * 0.5 + "px";
-    section4.style.backgroundPosition = "center " + value * 0.5 + "px";
+    function scroll() {
+        if (scrollDirection == "down") {
+            scrollAmount += scrollSpeed;
+            if (scrollAmount >= scrollTargetHeight) {
+                scrollAmount = scrollTargetHeight;
+                clearInterval(scrollIntervalID);
+            }
+        }
+        content.style.top = "-" + scrollAmount + "px";
+    }
+//make on click function to scroll up to first section if the current target is section 3
+    function scrollUp() {
+        scrollDirection = "up";
+        scrollIntervalID = setInterval(scrollu, scrollIntervalup);
+    }
+    //change target to section 1 then scroll to it
+    function scrollu() {
+        if (scrollDirection == "up") {
+            scrollAmount -= scrollSpeed;
+            if (scrollAmount <= 0) {
+                scrollAmount = 0;
+                clearInterval(scrollIntervalID);
+            }
+        }
+        content.style.top = "-" + scrollAmount + "px";
+    }
     
-});
+    
+    
 
-//window scroll 
 
-window.scroll({
-    top: 100,
-    left: 0,
-    behavior: 'smooth'
-});
 
-section1.onclick = function() {
-    scrollTargetHeight = text2Height;
-    text1FadeIn();
-    setTimeout(function() {
+ //make Fade-in Transition for the section  on Scroll
+    function fadeIn() {
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            opacity += 0.01;
+            if (opacity >= 1) {
+                clearInterval(intervalID);
+            }
+            section1.style.opacity = opacity;
+        }, 10);
+    }
+    function fadeIn2() {
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            opacity += 0.01;
+            if (opacity >= 1) {
+                clearInterval(intervalID);
+            }
+            section2.style.opacity = opacity;
+        }, 10);
+    }
+    function fadeIn3() {
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            opacity += 0.01;
+            if (opacity >= 1) {
+                clearInterval(intervalID);
+            }
+            section3.style.opacity = opacity;
+        }, 10);
+    }
+    function fadeIn4() {
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            opacity += 0.01;
+            if (opacity >= 1) {
+                clearInterval(intervalID);
+            }
+            section4.style.opacity = opacity;
+        }, 10);
+    }
+    function fadeIn5() {
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            opacity += 0.01;
+            if (opacity >= 1) {
+                clearInterval(intervalID);
+            }
+            section5.style.opacity = opacity;
+        }, 10);
+    }
+    function fadeIn6() {
+        var opacity = 0;
+        var intervalID = setInterval(function() {
+            opacity += 0.01;
+            if (opacity >= 1) {
+                clearInterval(intervalID);
+            }
+            section6.style.opacity = opacity;
+        }, 10);
+    }
+    fadeIn();
+        //on click scroll to each section
+        button1.onclick = function() {
+        scrollTargetHeight = section1Height;
+        
         scrollDown();
-    }, 1000);
-
-
-}
-section2.onclick = function() {
-    scrollTargetHeight = text3Height;
-    setTimeout(function() {
+        setTimeout(function(){fadeIn2()}, 1500);
+    
+       
+    };
+    button2.onclick = function() {
+        scrollTargetHeight = section3Height;
         scrollDown();
-    }, 1000);
+        setTimeout(function() {
+            fadeIn3()
+        }, 1500);
 
-
-
-
-}
-section3.onclick = function() {
-    scrollTargetHeight = text1Height;
-    setTimeout(function() {
-    scrollUp();
-    }, 1000);
+    };
+    button3.onclick = function() {
+        scrollTargetHeight = section4Height;
+        scrollDown();
+        setTimeout(function() {
+            fadeIn4();
+        }, 1500);
+    };
+    button4.onclick = function() {
+        scrollTargetHeight = section5Height;
+        scrollDown();
+        setTimeout(function() {
+            fadeIn5();
+        }, 1500);
+        
+    };
+    button5.onclick = function() {
+        scrollTargetHeight = section6Height;
+        scrollDown();
+        setTimeout(function() {
+            fadeIn6();
+        }, 1500);
+        
  
-}
+    };
 
-section4.onclick = function() {
-    scrollTargetHeight = text2Height;
-    setTimeout(function() {
-    scrollUp();
-    }, 1000);
-
-}
-
-section5.onclick = function() {
-    scrollTargetHeight = text2Height;
-    setTimeout(function() {
-    scrollUp();
-    }, 1000);
-
-}
-
-section6.onclick = function() {
-    scrollTargetHeight = text2Height;
-    setTimeout(function() {
-    scrollUp();
-    }, 1000);
-
-}
-
-
-//move image with scroll animation and  parallax effect 
-// var img = document.getElementById("img");
-// window.addEventListener("scroll", function() {
-//     var value = window.scrollY;
-//     img.style.top = value * 0.5 + "px";
-// });
-
-//change the background color of the sections with scroll animation
-// const [red, green, blue] = [69, 111, 225]
-// window.addEventListener('scroll', () => {
-//     const y = 1 + (window.scrollY || window.pageYOffset) / 150
-//     const [r, g, b] = [red/y, green/y, blue/y].map(Math.round)
-//     document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-// })
-
-
+    // section6.onclick = function() {
+    //     scrollTargetHeight = section1Height;
+       
+    //     setTimeout(function() {
+    //     scrollUp();
+    //     }, 5000);
+        
+    
+    // };
