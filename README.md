@@ -1,6 +1,6 @@
 # “Day in the Life of a Stickman at NYUAD”
 
-#Description:
+# Description:
 
 The website hosts a short comic titled “Day in the Life of a Stickman at NYUAD”. It basically takes the user through the normal life of a student at NYUAD. The comic starts with our person sleeping, he wakes up, gets dressed up for the day and then the user interactivity comes into play. In each panel the user gets two choices, and based on the choice the user selects the panel changes. The panel shifts based on the user’s choice and the user basically gets to control how the stickman will spend his day, and after the last panel we go back to our first panel. In order to keep the user engrossed by the comic, we wanted to keep the user a central part of the comic and hence we came up with the idea that instead of it just being a simple day in the life of a student at NYUAD, we gave the user the power to influence how the day goes by.  
 
